@@ -1,8 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import Cookies from "js-cookie";
 
 export default function Home() {
+    const cookie = Cookies.get("_some_cookie");
+
     return (
         <div className={styles.container}>
             <Head>
@@ -16,6 +18,7 @@ export default function Home() {
 
             <main className={styles.main}>
                 <h1 className={styles.title}>This is the multi zone app</h1>
+                <p>This is the cookie: {cookie}</p>
             </main>
         </div>
     );
