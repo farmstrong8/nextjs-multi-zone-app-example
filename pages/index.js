@@ -4,6 +4,7 @@ import Cookies from "js-cookie";
 
 export default function Home() {
     const cookie = Cookies.get("_some_cookie");
+    console.log({ cookie });
 
     return (
         <div className={styles.container}>
